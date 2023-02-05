@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> dc87451d1c2c111aaa366f62f6c39052f400438f
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
