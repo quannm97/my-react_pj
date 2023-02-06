@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./LoginPage.scss";
 import { Route,Router } from "react-router-dom";
+import * as ROUTES from '../../constants/routes';
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -11,7 +12,7 @@ const LoginPage = () => {
   };
 
   const handleSubmit = () => {
-    console.log(`Username:${username} Password:${password}`);
+    
   };
 
   return (
@@ -46,6 +47,7 @@ const LoginPage = () => {
               placeholder="Password"
               className="form-control"
             />
+            <i className={isShowPassword ?'fas fa-eye social-icon':'fas fa-eye-slash social-icon'} onClick={(e)=>handleShowHidePassword(e)}></i>
           </div>
           <div className="btn-group">
             <button
@@ -71,8 +73,11 @@ const LoginPage = () => {
             <span className="social-text">Linkendin</span>
           </a>
         </div>
-        <div className="sign-up-text">Sign up</div>
-        <div className="password-forget">Forget Password</div>
+        <div className="other-form">
+
+        <a className="link-text" href={ROUTES.SIGNUP} >Sign up</a>
+        <a className="link-text">Forget Password</a>
+        </div>
       </div>
     </div>
   );

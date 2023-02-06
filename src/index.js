@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> dc87451d1c2c111aaa366f62f6c39052f400438f
+import Firebase,{FirebaseContext} from './components/Firebase';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
@@ -12,9 +9,9 @@ import './styles/style.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <FirebaseContext.Provider value={new Firebase()}>
     <App />
-  </React.StrictMode>
+  </FirebaseContext.Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
