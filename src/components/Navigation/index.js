@@ -1,28 +1,28 @@
 import { Routes } from "react-router";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import * as ROUTES from '../../constants/routes';
 import './Navigation.scss';
 
 const Navigation = ()=> (
-    <div>
-        <ul>
-            <li>
-                <Link to={ROUTES.LOGIN}>Login</Link>
+    <div className="">
+        <ul className="navbar-nav">
+            <li className="navbar-item">
+                <NavLink to={ROUTES.LOGIN}>Login</NavLink>
             </li>
-            <li>
-                <Link to={ROUTES.LANDING}>Landing</Link>
+            <li className="nav-item">
+                <NavLink to={ROUTES.LANDING}>Landing</NavLink>
             </li>
-            <li>
-                <Link to={ROUTES.HOME}>Home</Link>
+            <li className="navbar-item">
+                <NavLink to={ROUTES.HOME}>Home</NavLink>
             </li>
-            <li>
-                <Link to={ROUTES.ACCOUNT}>Account</Link>
+            <li className="navbar-item">
+                <NavLink to={ROUTES.ACCOUNT}>Account</NavLink>
             </li>
-            <li>
-                <Link to={ROUTES.ADMIN}>Admin</Link>
+            <li className="navbar-item">
+                <NavLink to={ROUTES.ADMIN}>Admin</NavLink>
             </li>
-            <li>
-                <Link to={ROUTES.SIGNUP}>Sign Up</Link>
+            <li className="navbar-item">
+                <NavLink to={ROUTES.SIGNUP}>Sign Up</NavLink>
             </li>
         </ul>
     </div>
