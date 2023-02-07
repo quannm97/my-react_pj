@@ -1,17 +1,22 @@
-import Firebase,{FirebaseContext} from './components/Firebase';
+import {FirebaseContext} from './components/Firebase';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import './styles/style.scss'
+import { Provider, useDispatch } from 'react-redux';
+import store from './redux/store/store';
+import  configureStore  from './redux/store/store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <FirebaseContext.Provider value={new Firebase()}>
-    <App />
-  </FirebaseContext.Provider>
+  <Provider store={configureStore}>
+    <App/>
+  </Provider>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
